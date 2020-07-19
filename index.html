@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<title>Wheel</title>
+	</head>
+	<body>
+                <script src="wheel.js"></script>
+                <script>
+                        let wheel = new Wheel({
+				items: [
+					"NEW CAR!",
+					"$2000",
+					"$5",
+					"Bankrupt",
+					"Free Spin",
+					"$100",
+					"Meat Tray",
+					"$50"
+				],
+				x: '-25vmin',
+				y: '0px',
+				diameter: window.innerWidth < window.innerHeight ? window.innerWidth : window.innerHeight
+			});
+			setTimeout("wheel.init();", 100);
+                </script>
+                <script src="/popup/popup.js"></script>
+                <script>
+                        let popup = new Popup({
+                                heading: `Wheel`,
+                                body: `This is a classic 'chocolate wheel' raffle, designed as a module for a digital signage system.
+
+					Originally written as a combination of PHP and Javascript, I have updated it to a javascript object for this demo.
+
+					The difficult part was to have the wheel spin a number of times to stop on the chosen winner.  I have output the chosen winner to the console at the start of the spin to show what it will land on.  Lots of mathematics used in this.
+
+					Click on the wheel to spin a new winner.  Good luck!`,
+                                button: `Spin it!`
+                        });
+                </script>
+	</body>
+</html>
